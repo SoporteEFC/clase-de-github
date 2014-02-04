@@ -1,6 +1,8 @@
 Windows PowerShell
 Copyright (C) 2009 Microsoft Corporation. Reservados todos los derechos.
 
+Los cambios a continuacion
+
 C:\Users\Fabian\Documents\GitHub> d:
 D:\> cd .\github
 D:\github> cd .\clase-de-github
