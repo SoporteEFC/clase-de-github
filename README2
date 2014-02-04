@@ -1,0 +1,141 @@
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\Users\Fabian\Documents\GitHub> d:
+D:\> cd .\github
+D:\github> cd .\clase-de-github
+D:\github\clase-de-github> git config --global user.name "Fabian"
+D:\github\clase-de-github> git config --global user.email "mmbtrs@hotmail.com"
+D:\github\clase-de-github> ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Fabian/.ssh/id_rsa): servinte
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in servinte.
+Your public key has been saved in servinte.pub.
+The key fingerprint is:
+de:d2:dd:2f:9c:6c:85:8e:d2:24:49:6e:8c:70:b7:18 Fabian@FABIAN-PC
+D:\github\clase-de-github> cat servinte.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvM2c7vuR9FEaRfjqAdhxss8FSADfWzzmVfK0IbwjT/x
+lV0kDzRePe0FtEv7y+jwCNnZJ9tx0M5/F5KN53ubxeiDkUc8QXtCa8mcCMtcv3auTYibvzeK6EdBzQq
+qqXyznREy/D/WRuoF2eEUBDW++RvSYflxW84kuztUowKh7kUIHvpom0RJh2T/ibBIHC9q/7+CbR68Y9
+8niXtqTig5hy2R+7nEwD31vWUYVHOX7kl+RWbGzZSo65g2hZ9/te2SnYVCDJPWA7ot4UWZq58UGf3uF
+cP6gDIYVivB2R91N+1VAGAHl3TbKu4ftRNOWTsz0bc05/S8BnudKKfWvufJCcw== Fabian@FABIAN-
+PC
+D:\github\clase-de-github> git init
+Initialized empty Git repository in D:/github/clase-de-github/.git/
+D:\github\clase-de-github [master +2 ~0 -0 !]> touch README2
+D:\github\clase-de-github [master +3 ~0 -0 !]> git add README2
+D:\github\clase-de-github [master +1 ~0 -0 | +2 ~0 -0 !]> git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#       new file:   README2
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       servinte
+#       servinte.pub
+D:\github\clase-de-github [master +1 ~0 -0 | +2 ~0 -0 !]> git commit -m "este es
+ el primer archivo desde mi computadora"
+[master (root-commit) 3ea76a2] este es el primer archivo desde mi computadora
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README2
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origin git@github.
+com:https://github.com/servinte/clase-de-github.git
+fatal: remote origin already exists.
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origen git@github.
+com:https://github.com/servinte/clase-de-github.git
+D:\github\clase-de-github [master +2 ~0 -0 !]> git pull origen master
+fatal: I don't handle protocol 'git@github.com:https'
+D:\github\clase-de-github [master +2 ~0 -0 !]> dir
+
+
+    Directorio: D:\github\clase-de-github
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+-----      04/02/2014  10:07 a.m.          0 README2
+-a---      04/02/2014  09:59 a.m.       1743 servinte
+-a---      04/02/2014  09:59 a.m.        398 servinte.pub
+
+
+D:\github\clase-de-github [master +2 ~0 -0 !]> git pull origen master
+fatal: I don't handle protocol 'git@github.com:https'
+D:\github\clase-de-github [master +2 ~0 -0 !]> git pull origen master
+fatal: I don't handle protocol 'git@github.com:https'
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push origen master
+fatal: I don't handle protocol 'git@github.com:https'
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origen git@github.
+com:servinte/clase-de-github.git
+fatal: remote origen already exists.
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origen2 git@github
+.com:servinte/clase-de-github.git
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push origen2 master
+Warning: Permanently added 'github.com,192.30.252.129' (RSA) to the list of know
+n hosts.
+To git@github.com:servinte/clase-de-github.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:servinte/clase-de-github.git'
+
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+D:\github\clase-de-github [master +2 ~0 -0 !]> git pull origen2 master
+Warning: Permanently added 'github.com,192.30.252.129' (RSA) to the list of know
+n hosts.
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From github.com:servinte/clase-de-github
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origen2/master
+Merge made by the 'recursive' strategy.
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push origen2 master
+Warning: Permanently added 'github.com,192.30.252.129' (RSA) to the list of know
+n hosts.
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 512 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:servinte/clase-de-github.git
+   7de5f8b..8cb8b8c  master -> master
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push -u origen2 master
+Warning: Permanently added 'github.com,192.30.252.129' (RSA) to the list of know
+n hosts.
+Branch master set up to track remote branch master from origen2.
+Everything up-to-date
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origin3 https://gi
+thub.com/servinte/clases-de-github.git
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push -u origen3 master
+fatal: 'origen3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push -u origin3 master
+remote: Repository not found.
+fatal: repository 'https://github.com/servinte/clases-de-github.git/' not found
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origin3 https://gi
+thub.com/servinte/clase-de-github.git
+fatal: remote origin3 already exists.
+D:\github\clase-de-github [master +2 ~0 -0 !]> git remote add origin4 https://gi
+thub.com/servinte/clase-de-github.git
+D:\github\clase-de-github [master +2 ~0 -0 !]> git push -u origin4 master
+Branch master set up to track remote branch master from origin4.
+Everything up-to-date
+D:\github\clase-de-github [master +2 ~0 -0 !]>
